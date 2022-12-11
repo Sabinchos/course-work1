@@ -28,7 +28,7 @@ void loop(void)
   Serial.print (" | Temperature: ");
   Serial.println(sensors.getTempC(Term));//выводим температуру в градусах Цельсия
  
-  if(sensorValue > 3000)
+  if(sensorValue > 700)
   {
     Serial.println("Gas detected!");
     if (sensors.getTempC(Term) > 1000) {
