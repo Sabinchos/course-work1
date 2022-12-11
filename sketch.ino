@@ -13,8 +13,9 @@ void setup(void)
   Serial.println("Gas sensor warming up!");
   delay(20000); // даем MQ-2 время для прогрева
   sensors.begin();//инициализируем датчик
-  pinMode (8, OUTPUT);
-  pinMode (7, OUTPUT);
+  pinMode (8, OUTPUT);// устанавливает режим работы - выход
+  pinMode (7, OUTPUT);// устанавливает режим работы - выход
+
 }
 
 
@@ -27,10 +28,10 @@ void loop(void)
   Serial.print (" | Temperature: ");
   Serial.println(sensors.getTempC(Term));//выводим температуру в градусах Цельсия
  
-  if(sensorValue > 300)
+  if(sensorValue > 3000)
   {
     Serial.println("Gas detected!");
-    if (sensors.getTempC(Term) > 30) {
+    if (sensors.getTempC(Term) > 1000) {
       Serial.println("Fire!");
       digitalWrite (8, HIGH);// включаем светодиод (огнетушаащее вещество подано)
       digitalWrite (7, HIGH);// включаем светодиод (смс-сообщение в пожарную часть отправлено)
