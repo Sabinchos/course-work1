@@ -31,7 +31,7 @@ void loop(void)
   if(sensorValue > 700)
   {
     Serial.println("Gas detected!");
-    if (sensors.getTempC(Term) > 900) {
+    if (sensors.getTempC(Term) > 55) {
       Serial.println("Fire!");
       digitalWrite (8, HIGH);// включаем светодиод (огнетушаащее вещество подано)
       digitalWrite (7, HIGH);// включаем светодиод (смс-сообщение в МЧС отправлено)
