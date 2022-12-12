@@ -34,7 +34,7 @@ void loop(void)
     if (sensors.getTempC(Term) > 1000) {
       Serial.println("Fire!");
       digitalWrite (8, HIGH);// включаем светодиод (огнетушаащее вещество подано)
-      digitalWrite (7, HIGH);// включаем светодиод (смс-сообщение в пожарную часть отправлено)
+      digitalWrite (7, HIGH);// включаем светодиод (смс-сообщение в МЧС отправлено)
       delay (1500);//ждем 1,5 секунды
       digitalWrite (8, LOW);//выключаем светодиод
       digitalWrite (7, LOW);
