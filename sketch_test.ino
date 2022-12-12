@@ -15,9 +15,7 @@ void setup(void)
   sensors.begin();//инициализируем датчик
   pinMode (8, OUTPUT);// устанавливает режим работы - выход
   pinMode (7, OUTPUT);// устанавливает режим работы - выход
-
 }
-
 
 void loop(void)
 { 
@@ -38,7 +36,6 @@ void loop(void)
       delay (1500);//ждем 1,5 секунды
       digitalWrite (8, LOW);//выключаем светодиод
       digitalWrite (7, LOW);
-      
     }
   }
   
